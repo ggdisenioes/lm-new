@@ -84,18 +84,7 @@ const HomePage = () => {
             </motion.div>
 
             {/* Trust indicators */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-12 flex items-center gap-8 text-sm text-muted-foreground"
-            >
-              <div className="flex items-center gap-2">
-                <Award className="w-5 h-5 text-accent" />
-                <span>+15 años experiencia C-suite | Ejecutivos | Profesionales Senior</span>
-              </div>
-            </motion.div>
-          </div>
+</div>
         </div>
 
         {/* Scroll indicator */}
@@ -115,7 +104,7 @@ const HomePage = () => {
         </motion.div>
       </section>
 
-      {/* "Encuentra tu mejor versión si..." Section */}
+      {/* "Encuentra tu mejor versión para..." Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <AnimatedSection className="text-center mb-16">
@@ -123,7 +112,7 @@ const HomePage = () => {
               A lo largo de nuestra trayectoria, nos enfrentamos a decisiones importantes donde el rumbo no siempre es claro.
             </p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-              Encuentra tu mejor versión si…
+              Encuentra tu mejor versión para…
             </h2>
             <div className="accent-line mx-auto" />
           </AnimatedSection>
@@ -182,7 +171,7 @@ const HomePage = () => {
                 Cuéntame qué necesitas
               </h3>
               <p className="text-muted-foreground mb-8 leading-relaxed max-w-xl mx-auto">
-                Contacta conmigo para más información. Te ayudo a escoger la modalidad 
+                Marca la diferencia con asesoramiento experto. Te ayudo a escoger la modalidad
                 que más se ajuste a tu situación y necesidad.
               </p>
               <Button asChild className="btn-gold">
@@ -200,13 +189,7 @@ const HomePage = () => {
       <section className="section-padding bg-muted/30">
         <div className="container-custom">
           <AnimatedSection className="text-center mb-16">
-            <p className="text-muted-foreground mb-4 max-w-2xl mx-auto">
-              Vas bien de formación, de imagen… incluso de gadgets.
-            </p>
-            <p className="text-muted-foreground mb-3 max-w-2xl mx-auto">
-              ¿Es momento de invertir en asesoramiento que transforme tu carrera?
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
+<h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
               Potencia tu impacto con asesoramiento estratégico
             </h2>
             <div className="accent-line mx-auto" />

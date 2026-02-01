@@ -6,10 +6,6 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import aboutImage from "@/assets/about-detail.jpg";
 import { CONTACT } from "@/lib/contact";
 
-const sectors = ["Tecnología", "Industria", "Servicios", "Startups", "Energía", "Retail", "Salud", "Finanzas"];
-const areas = ["Recursos Humanos", "Finanzas", "Operaciones", "Marketing", "Ingeniería", "Comercial", "Dirección General"];
-const levels = ["C-level / Alta Dirección", "Dirección", "Senior Management", "Mandos intermedios", "Profesionales Senior", "Internacional"];
-
 const AboutPage = () => {
   return (
     <>
@@ -45,16 +41,19 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  Soy Lucinda Martínez, headhunter y asesora de carrera con más de 15 años de experiencia en selección de talento y acompañamiento profesional.
+                  En toda carrera profesional llega un momento en que, además del talento y la experiencia, lo que marca la diferencia es tu posicionamiento y las decisiones que tomas.
                 </p>
                 <p>
-                  A lo largo de mi trayectoria, he trabajado con perfiles ejecutivos, directivos y profesionales senior, ayudándoles a definir su estrategia, optimizar su posicionamiento y avanzar con seguridad en un mercado cada vez más competitivo.
+                  A lo largo de mi trayectoria como headhunter y en desarrollo de talento he tenido el privilegio de acompañar a cientos profesionales senior y ejecutivos —incluido C-suite— en momentos decisivos de su carrera.
                 </p>
                 <p>
-                  Mi propósito es ayudarte a tomar decisiones con claridad, mejorar tu proyección y activar tu potencial con un enfoque práctico y personalizado.
+                  Conozco bien el mercado. Entiendo lo que las organizaciones buscan y también lo que las personas necesitan para avanzar sin perder coherencia, incluso en situaciones de cambio y de incertidumbre.
                 </p>
                 <p>
-                  Trabajo desde la estrategia, pero también desde la escucha y la realidad de cada profesional: lo que te distingue, lo que te mueve y hacia dónde quieres llegar.
+                  Por eso mi trabajo se centra en aportar criterio, visión real de mercado y foco, para que puedas moverte con seguridad en situaciones que no admiten improvisación.
+                </p>
+                <p>
+                  Siempre desde un acompañamiento cercano, exigente y adaptado a tu realidad.
                 </p>
               </div>
               
@@ -109,17 +108,10 @@ const AboutPage = () => {
                     Sectores de actividad
                   </h3>
                 </div>
-                <div className="flex flex-wrap gap-3">
-                  {sectors.map((sector) => (
-                    <span
-                      key={sector}
-                      className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
-                    >
-                      {sector}
-                    </span>
-                  ))}
+                <p className="text-muted-foreground leading-relaxed">
+                  Experiencia en compañías de diferentes dimensiones y modelos operativos: start‑ups hasta grandes multinacionales y empresas familiares.
+                </p>
                 </div>
-              </div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
@@ -132,17 +124,10 @@ const AboutPage = () => {
                     Áreas funcionales
                   </h3>
                 </div>
-                <div className="flex flex-wrap gap-3">
-                  {areas.map((area) => (
-                    <span
-                      key={area}
-                      className="px-4 py-2 rounded-full bg-accent/20 text-foreground text-sm font-medium"
-                    >
-                      {area}
-                    </span>
-                  ))}
+                <p className="text-muted-foreground leading-relaxed">
+                  Conocimiento estructural del negocio y de sus principales palancas. Entiendo cómo se articulan las funciones clave y cómo cada una influye en la evolución y el posicionamiento profesional.
+                </p>
                 </div>
-              </div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
@@ -152,20 +137,13 @@ const AboutPage = () => {
                     <Users className="w-7 h-7 text-primary" />
                   </div>
                   <h3 className="text-xl font-display font-semibold text-foreground">
-                    Niveles de responsabilidad
+                    Niveles profesionales
                   </h3>
                 </div>
-                <div className="flex flex-wrap gap-3">
-                  {levels.map((level) => (
-                    <span
-                      key={level}
-                      className="px-4 py-2 rounded-full bg-muted/60 text-foreground text-sm font-medium"
-                    >
-                      {level}
-                    </span>
-                  ))}
+                <p className="text-muted-foreground leading-relaxed">
+                  Especialización en perfiles senior, ejecutivos y C‑suite. Cada nivel requiere un enfoque distinto y una estrategia a medida, alineada con el contexto y los objetivos profesionales.
+                </p>
                 </div>
-              </div>
             </AnimatedSection>
           </div>
         </div>
