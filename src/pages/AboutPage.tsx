@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Calendar, Linkedin, Briefcase, Users, Award, Building } from "lucide-react";
+import { Calendar, Linkedin, Briefcase, Users, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import aboutImage from "@/assets/about-detail.jpg";
@@ -164,9 +164,8 @@ const AboutPage = () => {
                 que genere oportunidades reales. No trabajo con fórmulas genéricas: 
                 cada asesoramiento se adapta a tu situación, tus objetivos y tu ritmo.
               </p>
-              <div className="grid sm:grid-cols-3 gap-8 mt-12">
+              <div className="grid sm:grid-cols-2 gap-8 mt-12">
                 {[
-                  { icon: Award, label: "+15 años de experiencia" },
                   { icon: Users, label: "+500 profesionales asesorados" },
                   { icon: Briefcase, label: "C-suite & ejecutivos" },
                 ].map((stat, index) => (

@@ -35,10 +35,10 @@ const phases = [
     subtitle: "Tu valor profesional",
     icon: Search,
     items: [
-      "Análisis profundo de tu perfil y trayectoria",
-      "Evaluación del mercado y sus demandas",
-      "Identificación de fortalezas, skills y áreas de desarrollo",
-      "Definición de tu propuesta de valor como profesional",
+      "Análisis inicial de tu perfil y objetivo",
+      "El mercado y otras perspectivas",
+      "Identificación de fortalezas y áreas de mejora",
+      "Desarrolla tu propuesta de valor única",
     ],
     color: "from-primary to-turquoise",
   },
@@ -48,10 +48,10 @@ const phases = [
     subtitle: "Tu mensaje con impacto",
     icon: MessageCircle,
     items: [
-      "Mensaje claro y estratégico: qué haces, por qué tú, hacia dónde vas",
-      "Optimización CV / LinkedIn / Bio Ejecutiva",
-      "Dominar entrevistas: estructura, tono, foco, narrativa",
-      "Networking con intención: visibilidad y relaciones profesionales",
+      "Comunicación profesional y Elevator pitch",
+      "Optimización CV/LinkedIn/BioEjecutiva",
+      "Mensajes clave para cada contexto",
+      "Preparación para entrevistas",
     ],
     color: "from-turquoise to-accent",
   },
@@ -61,9 +61,9 @@ const phases = [
     subtitle: "Tu carrera al siguiente nivel",
     icon: Rocket,
     items: [
-      "Estrategia de acción y búsqueda (incluido el mercado oculto)",
-      "Objetivos viables y un plan concreto para alcanzarlos",
-      "Decisiones con más criterio y foco profesional",
+      "Visibilidad profesional y mercado oculto",
+      "Plan de acción concreto y realista",
+      "Estrategia de networking efectivo",
       "Seguimiento y ajustes continuos",
     ],
     color: "from-accent to-primary",
@@ -130,7 +130,7 @@ const MethodologyPage = () => {
         <div className="container-custom">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-              El proceso en 3 fases
+              Las 3 fases del proceso
             </h2>
             <div className="accent-line mx-auto" />
           </AnimatedSection>
@@ -227,10 +227,10 @@ const MethodologyPage = () => {
         <div className="container-custom">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-              Las 4 claves que trabajaremos
+              Las 4 claves de mi acompañamiento
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              Impulsa tu carrera con un acompañamiento experto y personalizado.
+              Con una visión integral, nos centraremos en los aspectos más relevantes para tu caso y trazaremos una estrategia a tu medida, que responda a tus necesidades y objetivos.
             </p>
             <div className="accent-line mx-auto mt-6" />
           </AnimatedSection>
@@ -238,20 +238,20 @@ const MethodologyPage = () => {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Claridad",
-                desc: "Define tu objetivo profesional y toma decisiones con criterio.",
+                title: "Programas individuales y personalizados",
+                desc: "Cada plan se adapta a tu perfil, necesidades y objetivos.",
               },
               {
-                title: "Potenciación",
-                desc: "Identifica fortalezas, propuesta de valor y posicionamiento.",
+                title: "Itinerario a medida",
+                desc: "Hoja de ruta flexible que contempla todas las fases de tu desarrollo profesional.",
               },
               {
-                title: "Proyección",
-                desc: "Mejora CV, LinkedIn y entrevistas para proyectarte con impacto.",
+                title: "Sesiones de acompañamiento",
+                desc: "Espacio seguro para explorar metas, afrontar retos y avanzar con confianza.",
               },
               {
-                title: "Estrategia",
-                desc: "Traza una hoja de ruta realista para avanzar en tu carrera.",
+                title: "Material de apoyo y seguimiento",
+                desc: "Recursos prácticos entre sesiones para incorporar nuevas técnicas y enfoques.",
               },
             ].map((k, idx) => (
               <StaggerItem key={idx}>

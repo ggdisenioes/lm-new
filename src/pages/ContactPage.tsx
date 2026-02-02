@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Calendar, Linkedin, MessageCircle, Mail } from "lucide-react";
+import { Calendar, Linkedin, MessageCircle } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { CONTACT, getWhatsAppUrl } from "@/lib/contact";
 
 const ContactPage = () => {
-  const agendaMessage =
-    "Hola Lucinda, me gustaría agendar una consulta. Te comparto mi LinkedIn y/o CV: [pega aquí el enlace]. Mi objetivo es: [escribe aquí].";
+  const whatsappIntroMessage =
+    "Hola Lucinda, soy [Nombre]. Mi perfil de LinkedIn: [URL]. Me interesa: [Gestión de carrera / Búsqueda / CV-LinkedIn-Bio / Entrevista].";
+
+  const agendaRequestMessage =
+    "Hola Lucinda, me gustaría reservar una llamada. Te comparto mi perfil de LinkedIn (o CV): [URL] y mi objetivo en 1 frase: [texto]. ¿Podrías compartirme el enlace de agenda?";
 
   return (
     <>
@@ -39,10 +42,12 @@ const ContactPage = () => {
         <div className="container-custom">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-              Elige el canal que prefieras
+              Elige la vía más directa
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              Para optimizar la primera conversación, te pediré que compartas tu perfil de LinkedIn y/o CV antes de agendar.
+              Normalmente el primer contacto es por LinkedIn. Si lo prefieres, también puedes escribirme por WhatsApp.
+              <br />
+              Para reservar una llamada, primero necesito ver tu perfil (LinkedIn o CV) para que no sea tan en frío.
             </p>
             <div className="accent-line mx-auto mt-6" />
           </AnimatedSection>
@@ -66,7 +71,7 @@ const ContactPage = () => {
                   </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  Escríbeme por LinkedIn y cuéntame tu objetivo. Si puedes, incluye el enlace a tu perfil y/o tu CV.
+                  Envíame tu enlace de LinkedIn y tu objetivo en una frase. Si lo prefieres, puedes adjuntar tu CV.
                 </p>
                 <div className="mt-6">
                   <span className="text-primary font-medium text-sm inline-flex items-center gap-2">
@@ -80,7 +85,7 @@ const ContactPage = () => {
             {/* WhatsApp */}
             <AnimatedSection delay={0.1}>
               <a
-                href={getWhatsAppUrl("Hola Lucinda, me gustaría contarte mi situación profesional.")}
+                href={getWhatsAppUrl(whatsappIntroMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-premium p-8 h-full block group"
@@ -95,7 +100,7 @@ const ContactPage = () => {
                   </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  Ideal para una primera toma de contacto. Te pediré tu LinkedIn/CV para valorar el encaje del servicio.
+                  Ideal para una primera toma de contacto. Te recomiendo enviar tu LinkedIn y el servicio que te interesa.
                 </p>
                 <div className="mt-6">
                   <span className="text-primary font-medium text-sm inline-flex items-center gap-2">
@@ -114,58 +119,37 @@ const ContactPage = () => {
                     <Calendar className="w-7 h-7 text-foreground" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-display font-semibold text-foreground">Agenda una consulta</h3>
+                    <h3 className="text-xl font-display font-semibold text-foreground">Agenda</h3>
                     <p className="text-muted-foreground text-sm">Con filtro previo</p>
                   </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Antes de agendar, envíame tu LinkedIn/CV y tu objetivo. Así aprovechamos mejor la llamada.
+                  Para reservar una llamada, primero envíame tu LinkedIn (o CV) por LinkedIn o WhatsApp.
+                  Con eso te comparto el enlace de agenda.
                 </p>
-                <Button asChild className="btn-gold w-full">
-                  <a href={getWhatsAppUrl(agendaMessage)} target="_blank" rel="noopener noreferrer">
-                    Enviar información para agendar
-                  </a>
-                </Button>
-                {CONTACT.CALENDAR_URL ? (
-                  <div className="mt-4">
-                    <Button asChild variant="outline" className="w-full">
-                      <a href={CONTACT.CALENDAR_URL} target="_blank" rel="noopener noreferrer">
-                        Ir al calendario
-                      </a>
-                    </Button>
-                  </div>
-                ) : null}
+                <div className="flex flex-col gap-3">
+                  <Button asChild className="btn-gold w-full">
+                    <a href={getWhatsAppUrl(agendaRequestMessage)} target="_blank" rel="noopener noreferrer">
+                      Pedir enlace de agenda
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="w-full">
+                    <a href={CONTACT.LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
+                      Pedírmelo por LinkedIn
+                    </a>
+                  </Button>
+                </div>
               </div>
             </AnimatedSection>
           </div>
 
-          {/* Email (optional) */}
-          <AnimatedSection delay={0.3} className="mt-12">
-            <div className="bg-muted/50 rounded-2xl p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Email</p>
-                  <p className="text-muted-foreground text-sm">{CONTACT.EMAIL}</p>
-                </div>
-              </div>
-              <Button asChild className="btn-secondary">
-                <a href={`mailto:${CONTACT.EMAIL}`}>Escribir email</a>
-              </Button>
-            </div>
-          </AnimatedSection>
-
           {/* Privacy notice */}
           <AnimatedSection delay={0.35} className="mt-10">
             <div className="bg-muted/50 rounded-xl p-6">
-              <h4 className="font-semibold text-foreground mb-3 text-sm">
-                Información básica de protección de datos
-              </h4>
+              <h4 className="font-semibold text-foreground mb-3 text-sm">Protección de datos</h4>
               <p className="text-muted-foreground text-xs leading-relaxed mb-4">
-                Responsable: Lucinda Martínez | Finalidad: Gestionar tu consulta y contactarte | Legitimación: Tu consentimiento |
-                Destinatarios: No se cederán datos a terceros | Derechos: Acceso, rectificación, supresión y otros según nuestra política de privacidad.
+                Si me contactas por LinkedIn o WhatsApp, la información que compartas se usará únicamente para gestionar tu consulta y responderte.
+                Consulta los detalles en las políticas siguientes.
               </p>
               <div className="flex flex-wrap gap-3 text-xs">
                 <Link to="/privacidad" className="text-primary hover:underline">
