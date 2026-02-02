@@ -10,7 +10,7 @@ const services = [
     id: "gestion-carrera",
     icon: Compass,
     title: "Gestión de Carrera",
-    subtitle: "Define tu camino profesional con claridad",
+    subtitle: "Define tu camino profesional con claridad y propósito",
     description: "Te ayudo a definir tu camino, explorar oportunidades y reforzar tu posicionamiento en el mercado.",
     benefits: [
       "Identificar tus fortalezas y cómo potenciarlas",
@@ -25,8 +25,8 @@ const services = [
     id: "busqueda-empleo",
     icon: Briefcase,
     title: "Búsqueda de Empleo",
-    subtitle: "Transición estratégica hacia nuevas oportunidades",
-    description: "Plan de acción práctico para acceder al mercado oculto y posicionarte con éxito.",
+    subtitle: "Estrategia y acción para acceder a mejores oportunidades",
+    description: "Un programa diseñado para profesionales que quieren afrontar este momento clave de su carrera con perspectiva externa y enfoque estratégico.",
     benefits: [
       "Definir perfil, objetivo y estrategia claros",
       "Diferenciarte de otros candidatos",
@@ -52,9 +52,9 @@ const services = [
   {
     id: "entrenamiento-entrevista",
     icon: MessageSquare,
-    title: "Entrenamiento — Entrevista de Trabajo",
+    title: "Entrevista de Trabajo",
     subtitle: "Prepárate para este momento decisivo",
-    description: "Cada entrevista es tu momento para conectar de forma profesional y efectiva y proyectar credibilidad, seguridad y posicionamiento.",
+    description: "Cada entrevista es tu momento para conectar de forma profesional y efectiva. Con mi orientación, deja de ser un riesgo y se convierte en una oportunidad para proyectar credibilidad, seguridad y posicionamiento.",
     benefits: [
       "Superar bloqueos y nervios",
       "Estructurar respuestas efectivas",

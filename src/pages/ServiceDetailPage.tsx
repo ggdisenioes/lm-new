@@ -47,7 +47,7 @@ const servicesData: Record<string, {
     ],
     development: [
       "Cuestionario-briefing inicial",
-      "Sesiones 1:1 por videoconferencia",
+      "Sesiones 1:1",
       "Material de apoyo y ejercicios prácticos",
       "Revisión y seguimiento continuo",
     ],
@@ -80,10 +80,10 @@ const servicesData: Record<string, {
     ],
     development: [
       "Cuestionario-briefing inicial",
-      "Sesiones 1:1 por videoconferencia",
+      "Sesiones 1:1",
       "Material de apoyo y ejercicios prácticos",
       "Mejora de herramientas (CV / LinkedIn)",
-      "Seguimiento y soporte continuo",
+      "Revisión y seguimiento continuo",
     ],
   },
   "rediseno-optimizacion": {
@@ -126,8 +126,8 @@ const servicesData: Record<string, {
   },
   "entrenamiento-entrevista": {
     icon: MessageSquare,
-    title: "Entrenamiento — Entrevista de Trabajo",
-    subtitle: "Prepárate para este momento decisivo con confianza",
+    title: "Entrevista de Trabajo",
+    subtitle: "Prepárate para este momento decisivo",
     description: "Cada entrevista es tu momento para conectar de forma profesional y efectiva. Con mi orientación, deja de ser un riesgo y se convierte en una oportunidad para proyectar credibilidad, seguridad y posicionamiento.",
     forWhom: [
       "Profesionales con entrevistas programadas",

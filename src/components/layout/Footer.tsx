@@ -68,7 +68,7 @@ export const Footer = () => {
                 "Gestión de Carrera",
                 "Búsqueda de Empleo",
                 "CV y LinkedIn",
-                "Entrenamiento Entrevistas",
+                "Entrevista de Trabajo",
               ].map((service) => (
                 <li key={service}>
                   <Link

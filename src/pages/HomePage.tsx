@@ -211,13 +211,13 @@ const HomePage = () => {
               },
               {
                 icon: FileText,
-                title: "CV / LinkedIn / Bio",
+                title: "CV / LinkedIn / Bio Ejecutiva",
                 description: "Rediseño y optimización para mejorar tu primera impresión.",
                 href: "/servicios/rediseno-optimizacion",
               },
               {
                 icon: MessageSquare,
-                title: "Entrenamiento Entrevista",
+                title: "Entrevista de Trabajo",
                 description: "Estrategia, técnicas y confianza para destacar y dejar huella.",
                 href: "/servicios/entrenamiento-entrevista",
               },
