@@ -105,16 +105,25 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-white/10">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-white/50 text-sm">
-              Copyright 2025 © | Todos los derechos reservados – Lucinda Martínez
-            </p>
-            <p className="text-white/50 text-xs">
-              Diseñado con pasión para impulsar carreras
-            </p>
-          </div>
-        </div>
+	        <div className="mt-16 pt-8 border-t border-white/10">
+	          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+	            <p className="text-white/50 text-sm">
+	              Copyright 2026 © | Todos los derechos reservados – Lucinda Martínez
+	            </p>
+	            <p className="text-white/50 text-xs">
+	              Diseñado por{" "}
+	              <a
+	                href="https://ggdisenio.es"
+	                target="_blank"
+	                rel="noopener noreferrer"
+	                className="text-white/70 hover:text-accent transition-colors"
+	              >
+	                GG DISEÑO
+	              </a>{" "}
+	              para impulsar carreras
+	            </p>
+	          </div>
+	        </div>
       </div>
     </footer>
   );
