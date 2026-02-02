@@ -45,9 +45,9 @@ const ContactPage = () => {
               Elige la vía más directa
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              Normalmente el primer contacto es por LinkedIn. Si lo prefieres, también puedes escribirme por WhatsApp.
+              Me encantará leerte. Puedes escribirme por LinkedIn o, si te resulta más cómodo, por WhatsApp.
               <br />
-              Para reservar una llamada, primero necesito ver tu perfil (LinkedIn o CV) para que no sea tan en frío.
+              Cuéntame en una frase qué estás buscando y, si quieres, comparte tu enlace de LinkedIn.
             </p>
             <div className="accent-line mx-auto mt-6" />
           </AnimatedSection>
