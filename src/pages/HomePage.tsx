@@ -1,10 +1,154 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Target, TrendingUp, Users, Award, Compass, Briefcase, FileText, MessageSquare } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Sparkles, Target, TrendingUp, Users, Award, Compass, Briefcase, FileText, MessageSquare, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section";
 import heroImage from "@/assets/hero-image.png";
 import servicesImage from "@/assets/services-image.png";
+
+const testimonials = [
+  {
+    role: "Operations Manager",
+    industry: "Fintech / Supply Chain Finance",
+    text: "Me encontraba en un proceso de transición del mercado argentino al español y no tenía claro cómo posicionar mi perfil en un entorno completamente diferente. El trabajo con Lucinda me ayudó a entender el valor real de mi trayectoria y a comunicar mi experiencia de forma más estratégica, dándome además mucha más seguridad en el proceso. Destaco especialmente el análisis personalizado de mi perfil, la preparación para entrevistas y el conocimiento actualizado del mercado laboral.",
+  },
+  {
+    role: "Director de Producto y Transformación Digital",
+    industry: "Telecomunicaciones",
+    text: "Tras más de 15 años en la misma empresa, me enfrenté a una salida profesional compleja y a un proceso de búsqueda en el que no entendía por qué no avanzaba en entrevistas. El trabajo con Lucinda me ayudó a analizar mi situación con mayor objetividad y menos peso emocional, ganar seguridad y reformular cómo comunicar mi trayectoria y mi valor profesional. Destaco especialmente su capacidad para entender cuál es el punto de partida de la persona a la que está acompañando y lo que necesita y su conocimiento del mercado y de la toma de decisiones complejas de carrera.",
+  },
+  {
+    role: "Socia-Fundadora",
+    industry: "Firma de servicios profesionales",
+    text: "Tras la venta de mi empresa y haber liderado la integración durante dos años, necesitaba revisar y ordenar mi experiencia para afrontar una nueva etapa profesional. El trabajo con Lucinda me ayudó a clarificar prioridades, estructurar mis fortalezas y tomar decisiones con más seguridad sobre cómo posicionarme. Fue un proceso de reflexión que me permitió dar valor a mis 30 años de trayectoria hacia la participación en Consejos Asesores de empresas familiares y pymes. Destaco especialmente la personalización, la flexibilidad y el apoyo en la construcción del mensaje de valor, así como el conocimiento actualizado del mercado.",
+  },
+  {
+    role: "Senior Credit Manager",
+    industry: "Audiovisual",
+    text: "Me encontraba en un proceso de transición profesional tras dejar mi puesto de muchos años en Barcelona para regresar a Bizkaia. Necesitaba reenfocar mi perfil y dar dirección a mi siguiente etapa profesional. El proceso me ayudó a identificar mis fortalezas, ganar claridad sobre mis oportunidades y afrontar la búsqueda con mayor seguridad y estrategia. Destaco especialmente la capacidad de análisis, la visión externa objetiva y el enfoque práctico y personalizado. Además, valoro mucho la cercanía y la disponibilidad de Lucinda durante todo el proceso.",
+  },
+  {
+    role: "Director de Servicios",
+    industry: "Telecomunicaciones y Servicios Digitales",
+    text: "Había dejado voluntariamente mi anterior empleo y estaba intentando reconducir mi carrera hacia sectores distintos a los que había trabajado toda mi vida. El trabajo con Lucinda me ayudó a entender cómo funciona realmente el mercado laboral, reorganizar mi historia profesional e identificar qué estaba frenando mi acceso a oportunidades. Esto me dio más claridad y seguridad para avanzar de forma autónoma. Destaco especialmente su capacidad de empatía, así como el acompañamiento en la construcción de la narrativa profesional, la comprensión del mercado y el apoyo en la toma de decisiones.",
+  },
+  {
+    role: "Director Corporativo",
+    industry: "Audiovisual y broadcasting",
+    text: "Después de más de 25 años en la misma empresa, atravesaba un momento de gran desorientación laboral y profesional. Desde el primer contacto encontré seguridad, confianza y un acompañamiento cercano que me ayudó a afrontar esta transición con más claridad. Las sesiones me aportaron guía, reflexión y estrategia para avanzar en el proceso de salida voluntaria y reincorporación al mercado laboral. Destaco especialmente el apoyo humano y profesional recibido, sintiendo en todo momento que contaba con una persona de confianza a la que acudir.",
+  },
+  {
+    role: "Director General",
+    industry: "Servicios aeroportuarios",
+    text: "Necesitaba apoyo para centrarme en una nueva etapa laboral tras la salida voluntaria de mi empresa con la que estuve vinculado muchos años, definir mi perfil profesional, ponerlo en valor y posicionarlo mejor en el mercado. Las sesiones me aportaron exactamente lo que necesitaba en ese momento, ayudándome a avanzar con claridad y foco lo que me permitió construir una base sólida para afrontar esta nueva fase profesional. Destaco especialmente la empatía y el acompañamiento recibido durante todo el proceso.",
+  },
+  {
+    role: "CFO",
+    industry: "Comunicación y marketing digital",
+    text: "Inicié el proceso de asesoramiento con el objetivo reposicionar mi perfil profesional. Tenía claro que quería seguir creciendo y necesitaba ordenar ideas, ganar foco y entender mejor cómo reforzar mi posicionamiento desde una visión más estratégica. El trabajo con Lucinda me ayudó a clarificar mi propuesta diferencial, reconocer fortalezas que no estaba poniendo en valor y ganar confianza para mirar mi trayectoria con más ambición y alineada con mi potencial. Destaco especialmente su capacidad para aportar una mirada externa, objetiva y muy humana, ayudándome a aterrizar ideas y a definir mejor cómo posicionarme profesionalmente.",
+  },
+];
+
+const TestimonialsCarousel = () => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = { mobile: 1, desktop: 2 };
+
+  // We show 2 testimonials at a time on desktop, 1 on mobile
+  const totalPages = Math.ceil(testimonials.length / itemsPerPage.desktop);
+
+  const next = () => setCurrentPage((prev) => (prev + 1) % totalPages);
+  const prev = () => setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
+
+  return (
+    <div>
+      {/* Desktop: 2 per page */}
+      <div className="hidden md:block">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentPage}
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -40 }}
+            transition={{ duration: 0.4 }}
+            className="grid grid-cols-2 gap-8"
+          >
+            {testimonials
+              .slice(currentPage * 2, currentPage * 2 + 2)
+              .map((t, i) => (
+                <TestimonialCard key={currentPage * 2 + i} testimonial={t} />
+              ))}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Mobile: 1 per page */}
+      <div className="md:hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentPage}
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -40 }}
+            transition={{ duration: 0.4 }}
+          >
+            <TestimonialCard testimonial={testimonials[currentPage % testimonials.length]} />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Navigation */}
+      <div className="flex items-center justify-center gap-4 mt-10">
+        <button
+          onClick={prev}
+          className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-colors"
+          aria-label="Anterior"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <div className="flex gap-2">
+          {Array.from({ length: totalPages }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentPage(i)}
+              className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                i === currentPage ? "bg-primary" : "bg-border hover:bg-muted-foreground/40"
+              }`}
+              aria-label={`Página ${i + 1}`}
+            />
+          ))}
+        </div>
+        <button
+          onClick={next}
+          className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-colors"
+          aria-label="Siguiente"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] }) => (
+  <div className="card-premium p-8 h-full flex flex-col">
+    <Quote className="w-8 h-8 text-primary/20 mb-4 flex-shrink-0" />
+    <p className="text-muted-foreground italic leading-relaxed mb-6 flex-grow">
+      "{testimonial.text}"
+    </p>
+    <div className="flex items-center gap-4 pt-4 border-t border-border/50">
+      <div className="w-10 h-10 rounded-full bg-gradient-blue flex items-center justify-center flex-shrink-0">
+        <span className="text-white font-semibold text-sm">
+          {testimonial.role.charAt(0)}
+        </span>
+      </div>
+      <div>
+        <p className="font-semibold text-foreground text-sm">{testimonial.role}</p>
+        <p className="text-xs text-muted-foreground">{testimonial.industry}</p>
+      </div>
+    </div>
+  </div>
+);
 
 const HomePage = () => {
   return (
@@ -405,7 +549,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Testimonials Placeholder */}
+      {/* Testimonials */}
       <section className="section-padding bg-muted/30">
         <div className="container-custom">
           <AnimatedSection className="text-center mb-12">
@@ -415,25 +559,7 @@ const HomePage = () => {
             <div className="accent-line mx-auto" />
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((_, index) => (
-              <AnimatedSection key={index} delay={index * 0.1}>
-                <div className="card-premium p-8">
-                  <p className="text-muted-foreground italic mb-6 leading-relaxed">
-                    "Próximamente podrás leer testimonios reales de profesionales
-                    que han transformado su carrera con mi asesoramiento."
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-blue" />
-                    <div>
-                      <p className="font-semibold text-foreground">Nombre Cliente</p>
-                      <p className="text-sm text-muted-foreground">Cargo / Empresa</p>
-                    </div>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
+          <TestimonialsCarousel />
         </div>
       </section>
 
