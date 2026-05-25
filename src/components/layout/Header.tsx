@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Calendar } from "lucide-react";
+import { Menu, X, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -78,8 +78,8 @@ export const Header = () => {
             <div className="hidden lg:flex items-center gap-4">
               <Button asChild className="btn-gold gap-2">
                 <Link to="/contacto">
-                  <Calendar className="w-4 h-4" />
-                  Agenda una consulta
+                  <Mail className="w-4 h-4" />
+                  Escríbeme
                 </Link>
               </Button>
             </div>
@@ -149,8 +149,8 @@ export const Header = () => {
                 >
                   <Button asChild className="btn-gold w-full gap-2">
                     <Link to="/contacto">
-                      <Calendar className="w-4 h-4" />
-                      Agenda una consulta
+                      <Mail className="w-4 h-4" />
+                      Escríbeme
                     </Link>
                   </Button>
                 </motion.div>

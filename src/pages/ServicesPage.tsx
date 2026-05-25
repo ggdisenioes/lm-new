@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, Compass, Briefcase, FileText, MessageSquare, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Compass, Briefcase, FileText, MessageSquare, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section";
 
@@ -42,7 +42,7 @@ const services = [
     subtitle: "Rediseño y Optimización",
     description: "Estas herramientas son tus aliadas: úsalas para avanzar, destacar y abrir oportunidades. Bien elaboradas, se convierten en palancas estratégicas.",
     benefits: [
-      "CV profesional y carta de presentación",
+      "CV profesional y carta de presentación estratégico de alto impacto",
       "Perfil LinkedIn optimizado para visibilidad",
       "Bio ejecutiva para foros y ponencias",
       "Mensajes consistentes en todos los canales",
@@ -88,8 +88,7 @@ const ServicesPage = () => {
             </p>
             <Button asChild className="btn-gold">
               <Link to="/contacto">
-                <Calendar className="w-5 h-5 mr-2" />
-                Agenda una consulta
+                Escríbeme
               </Link>
             </Button>
           </motion.div>
@@ -146,13 +145,12 @@ const ServicesPage = () => {
               ¿No estás seguro/a de cuál es el servicio adecuado?
             </h2>
             <p className="text-white/80 text-lg mb-8">
-              Agenda una consulta gratuita y te ayudo a identificar cuál es la opción 
+              Escríbeme y te ayudo a identificar cuál es la opción 
               que mejor se adapta a tu situación y objetivos.
             </p>
             <Button asChild className="btn-gold">
               <Link to="/contacto">
-                <Calendar className="w-5 h-5 mr-2" />
-                Agenda una consulta
+                Escríbeme
               </Link>
             </Button>
           </AnimatedSection>

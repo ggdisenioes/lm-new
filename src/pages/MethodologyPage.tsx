@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Calendar, Award, Target, Compass, Users, Search, MessageCircle, Rocket } from "lucide-react";
+import { Award, Target, Compass, Users, Search, MessageCircle, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section";
 
@@ -9,22 +9,22 @@ const pillars = [
   {
     icon: Award,
     title: "Experiencia y visión del mercado",
-    description: "Conocimiento profundo del ecosistema de talento y las dinámicas del mercado laboral español e internacional.",
+    description: "Conocimiento profundo del ecosistema de talento y sus dinámicas clave.",
   },
   {
     icon: Target,
     title: "Enfoque personalizado",
-    description: "Cada persona es única. Mi asesoramiento se adapta a tu perfil, objetivos y contexto específico.",
+    description: "Asesoramiento adaptado a tu perfil, objetivos y contexto profesional.",
   },
   {
     icon: Compass,
-    title: "Claridad y dirección para cada etapa",
-    description: "Te guío con un plan claro, sea cual sea el momento de tu carrera profesional.",
+    title: "Claridad y dirección en cada etapa",
+    description: "Aporto foco, criterio y una hoja de ruta para avanzar con seguridad.",
   },
   {
     icon: Users,
-    title: "Apoyo constante y flexibilidad",
-    description: "Acompañamiento cercano con la flexibilidad que necesitas para avanzar a tu ritmo.",
+    title: "Acompañamiento flexible",
+    description: "Apoyo continuo para asegurar progreso y avanzar a tu ritmo.",
   },
 ];
 
@@ -84,8 +84,9 @@ const MethodologyPage = () => {
           >
             <p className="text-primary font-medium mb-4">Metodología</p>
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-6">
-              Descubre, transmite y{" "}
-              <span className="text-gradient-blue">proyecta tu valor profesional</span>
+              Descubre, transmite y proyecta{" "}
+              <br className="hidden sm:block" />
+              <span className="text-gradient-blue">tu valor profesional</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Un enfoque personalizado y alineado a tu objetivo, con soluciones prácticas 
@@ -282,8 +283,7 @@ const MethodologyPage = () => {
             </p>
             <Button asChild className="btn-gold">
               <Link to="/contacto">
-                <Calendar className="w-5 h-5 mr-2" />
-                Agenda una consulta
+                Escríbeme
               </Link>
             </Button>
           </AnimatedSection>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section";
 
@@ -153,8 +153,7 @@ const BlogPage = () => {
             </p>
             <Button asChild className="btn-gold">
               <Link to="/contacto">
-                <Calendar className="w-5 h-5 mr-2" />
-                Agenda una consulta
+                Escríbeme
               </Link>
             </Button>
           </AnimatedSection>

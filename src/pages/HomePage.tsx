@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, Sparkles, Target, TrendingUp, Users, Award, Compass, Briefcase, FileText, UserCheck, MessageSquare } from "lucide-react";
+import { ArrowRight, Sparkles, Target, TrendingUp, Users, Award, Compass, Briefcase, FileText, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section";
-import heroImage from "@/assets/hero-image.jpg";
-import servicesImage from "@/assets/services-image.jpg";
+import heroImage from "@/assets/hero-image.png";
+import servicesImage from "@/assets/services-image.png";
 
 const HomePage = () => {
   return (
@@ -77,8 +77,7 @@ const HomePage = () => {
               </Button>
               <Button asChild className="btn-secondary gap-2">
                 <Link to="/contacto">
-                  <Calendar className="w-5 h-5" />
-                  Agenda una consulta
+                  Escríbeme
                 </Link>
               </Button>
             </motion.div>
@@ -133,7 +132,7 @@ const HomePage = () => {
               },
               {
                 icon: Sparkles,
-                text: "Acelerar tu trayectoria\n Trabaja tu marca personal y potencia tu proyección hacia nuevas responsabilidades.",
+                text: "Empezar con foco tu desarrollo profesional\n Trabaja tu marca personal y potencia tu proyección desde el inicio.",
               },
             ].map((item, index) => (
               <StaggerItem key={index}>
@@ -176,8 +175,7 @@ const HomePage = () => {
               </p>
               <Button asChild className="btn-gold">
                 <Link to="/contacto">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Agenda una consulta
+                  Escríbeme
                 </Link>
               </Button>
             </div>
@@ -200,7 +198,7 @@ const HomePage = () => {
               {
                 icon: Compass,
                 title: "Gestión de Carrera",
-                description: "Define tu camino, explora oportunidades y refuerza tu posicionamiento profesional.",
+                description: "Estrategia y dirección para tu carrera: ajusta tu trayectoria y evoluciona con confianza.",
                 href: "/servicios/gestion-carrera",
               },
               {
@@ -253,11 +251,8 @@ const HomePage = () => {
       </section>
 
       {/* Narrative Block */}
-      <section className="section-padding bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
-          <img src={servicesImage} alt="" className="w-full h-full object-cover" />
-        </div>
-        <div className="container-custom relative z-10">
+      <section className="section-padding bg-white">
+        <div className="container-custom">
           <div className="max-w-3xl">
             <AnimatedSection>
               <div className="accent-line-lg mb-6" />
@@ -284,34 +279,27 @@ const HomePage = () => {
       {/* Pillars Section */}
       <section className="section-padding bg-gradient-subtle">
         <div className="container-custom">
-          <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-              Experiencia y visión del mercado
-            </h2>
-            <div className="accent-line mx-auto" />
-          </AnimatedSection>
-
-          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {[
               {
                 icon: Award,
-                title: "",
-                description: "",
+                title: "Experiencia y visión del mercado",
+                description: "Conocimiento profundo del ecosistema de talento y sus dinámicas clave.",
               },
               {
                 icon: Target,
-                title: "",
-                description: "",
+                title: "Enfoque personalizado",
+                description: "Asesoramiento adaptado a tu perfil, objetivos y contexto profesional.",
               },
               {
                 icon: Compass,
-                title: "",
-                description: "",
+                title: "Claridad y dirección en cada etapa",
+                description: "Aporto foco, criterio y una hoja de ruta para avanzar con seguridad.",
               },
               {
                 icon: Users,
-                title: "",
-                description: "",
+                title: "Acompañamiento flexible",
+                description: "Apoyo continuo para asegurar progreso y avanzar a tu ritmo.",
               },
             ].map((pillar, index) => (
               <StaggerItem key={index}>
@@ -319,7 +307,12 @@ const HomePage = () => {
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-blue flex items-center justify-center">
                     <pillar.icon className="w-10 h-10 text-white" />
                   </div>
-                  <span className="sr-only">Icono</span>
+                  <h3 className="text-lg font-display font-semibold text-foreground mb-2">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {pillar.description}
+                  </p>
                 </div>
               </StaggerItem>
             ))}
@@ -393,7 +386,7 @@ const HomePage = () => {
           <AnimatedSection className="max-w-3xl mx-auto text-center">
             <div className="w-16 h-1 bg-accent rounded-full mx-auto mb-8" />
             <p className="text-xl sm:text-2xl leading-relaxed mb-8 text-white/90">
-              Con años de experiencia como headhunter y en desarrollo de talento, ayudo a ejecutivos y profesionales a definir estrategias personalizadas que aportan claridad, confianza y resultados en momentos clave de su carrera.
+              Un enfoque cercano y estratégico, respaldado por una sólida experiencia en executive search y desarrollo de talento, para ayudarte a entender mejor tu valor y proyectar tu carrera con mayor dirección y confianza.
             </p>
             <p className="text-accent font-display font-semibold text-lg mb-2">
               Lucinda Martínez
@@ -404,8 +397,7 @@ const HomePage = () => {
             <div className="mt-10">
               <Button asChild className="btn-gold">
                 <Link to="/contacto">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Agenda una consulta
+                  Escríbeme
                 </Link>
               </Button>
             </div>
@@ -427,13 +419,8 @@ const HomePage = () => {
             {[1, 2, 3].map((_, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
                 <div className="card-premium p-8">
-                  <div className="flex gap-1 mb-4">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <div key={star} className="w-5 h-5 rounded-full bg-accent" />
-                    ))}
-                  </div>
                   <p className="text-muted-foreground italic mb-6 leading-relaxed">
-                    "Próximamente podrás leer testimonios reales de profesionales 
+                    "Próximamente podrás leer testimonios reales de profesionales
                     que han transformado su carrera con mi asesoramiento."
                   </p>
                   <div className="flex items-center gap-4">
@@ -466,8 +453,7 @@ const HomePage = () => {
             </p>
             <Button asChild className="btn-gold text-lg px-10 py-5">
               <Link to="/contacto">
-                <Calendar className="w-5 h-5 mr-2" />
-                Agenda una consulta
+                Escríbeme
               </Link>
             </Button>
           </AnimatedSection>

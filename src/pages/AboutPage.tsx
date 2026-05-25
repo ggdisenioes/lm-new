@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Calendar, Linkedin, Briefcase, Users, Building } from "lucide-react";
+import { Linkedin, Briefcase, Users, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import aboutImage from "@/assets/about-detail.jpg";
+import aboutImage from "@/assets/about-detail.png";
+import methodologyIcon from "@/assets/methodology-illustration.jpg";
 import { CONTACT } from "@/lib/contact";
 
 const AboutPage = () => {
@@ -164,18 +165,12 @@ const AboutPage = () => {
                 que genere oportunidades reales. No trabajo con fórmulas genéricas: 
                 cada asesoramiento se adapta a tu situación, tus objetivos y tu ritmo.
               </p>
-              <div className="grid sm:grid-cols-2 gap-8 mt-12">
-                {[
-                  { icon: Users, label: "+500 profesionales asesorados" },
-                  { icon: Briefcase, label: "C-suite & ejecutivos" },
-                ].map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-turquoise/10 flex items-center justify-center">
-                      <stat.icon className="w-8 h-8 text-turquoise" />
-                    </div>
-                    <p className="text-foreground font-medium">{stat.label}</p>
-                  </div>
-                ))}
+              <div className="flex justify-center mt-12">
+                <img
+                  src={methodologyIcon}
+                  alt="Enfoque centrado en la persona"
+                  className="w-48 h-48 object-contain"
+                />
               </div>
             </AnimatedSection>
           </div>
@@ -195,8 +190,7 @@ const AboutPage = () => {
             </p>
             <Button asChild className="btn-gold">
               <Link to="/contacto">
-                <Calendar className="w-5 h-5 mr-2" />
-                Agenda una consulta
+                Escríbeme
               </Link>
             </Button>
           </AnimatedSection>

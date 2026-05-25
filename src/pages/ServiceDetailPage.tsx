@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Calendar, CheckCircle2, Compass, Briefcase, FileText, MessageSquare, Users, Clock, Video, FileCheck } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Compass, Briefcase, FileText, MessageSquare, Users, Clock, Video, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";
 
@@ -33,7 +33,7 @@ const servicesData: Record<string, {
     whatWeWork: [
       "Análisis de tu perfil, fortalezas y áreas de desarrollo",
       "Exploración de valores, motivaciones y propósito",
-      "Mapeo de oportunidades en el mercado actual",
+      "Visión de mercado y oportunidades profesionales",
       "Definición de objetivos claros y alcanzables",
       "Estrategia de posicionamiento y marca personal",
     ],
@@ -75,7 +75,7 @@ const servicesData: Record<string, {
       "Comunicación efectiva de tu valor",
       "Materiales profesionales optimizados",
       "Visibilidad de oportunidades del mercado oculto",
-      "Motivación y confianza extra.",
+      "Motivación y confianza extra",
       "Mayor efectividad en cada proceso",
     ],
     development: [
@@ -91,19 +91,12 @@ const servicesData: Record<string, {
     title: "CV / LinkedIn / Bio Ejecutiva",
     subtitle: "Rediseño y Optimización",
     description: "Estas herramientas son tus aliadas: úsalas para avanzar, destacar y abrir oportunidades. Bien elaboradas, se convierten en auténticas palancas estratégicas que refuerzan tu posicionamiento, amplían tu visibilidad y generan resultados reales en el mercado.",
-    sideBox: {
-      items: [
-        "Credibilidad y consistencia",
-        "Posicionamiento diferenciador",
-        "Visibilidad estratégica",
-        "Mayor impacto",
-      ],
-    },
     forWhom: [
-      "Profesionales que quieren un CV actualizado y estratégico",
+      "Profesionales que quieren un CV actualizado y estratégico y de alto impacto",
       "Ejecutivos que buscan mejorar su presencia en LinkedIn",
       "Ponentes que necesitan una bio ejecutiva clara e impactante",
       "Personas en búsqueda activa que aún no consiguen resultados",
+      "Ejecutivos y directivos que necesitan una Bio para roles de Comité o Board",
     ],
     whatWeWork: [
       "Análisis de tu trayectoria, logros y objetivo profesional",
@@ -116,7 +109,7 @@ const servicesData: Record<string, {
       "Transformar cada documento en una palanca estratégica",
       "CV con más impacto y credibilidad",
       "Perfil de LinkedIn con más visibilidad y oportunidades",
-      "Bio ejecutiva más sólida, memorable y diferenciadora.",
+      "Bio ejecutiva más sólida, memorable y diferenciadora",
     ],
     development: [
       "Sesión de briefing",
@@ -207,8 +200,7 @@ const ServiceDetailPage = () => {
               </p>
               <Button asChild className="btn-gold">
                 <Link to="/contacto">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Agenda una consulta
+                  Escríbeme
                 </Link>
               </Button>
             </div>
@@ -324,12 +316,11 @@ const ServiceDetailPage = () => {
               ¿Listo/a para dar el siguiente paso?
             </h2>
             <p className="text-white/80 text-lg mb-8">
-              Agenda una consulta para conocer más sobre este servicio y cómo puede ayudarte.
+              Escríbeme para conocer más sobre este servicio y cómo puede ayudarte.
             </p>
             <Button asChild className="btn-gold">
               <Link to="/contacto">
-                <Calendar className="w-5 h-5 mr-2" />
-                Agenda una consulta
+                Escríbeme
               </Link>
             </Button>
           </AnimatedSection>

@@ -6,10 +6,10 @@
 
 export const CONTACT = {
   /** WhatsApp international number without `+` or spaces (e.g. Spain: 34XXXXXXXXX). */
-  WHATSAPP_NUMBER: "34600000000",
+  WHATSAPP_NUMBER: "34600458207",
 
   /** LinkedIn public profile URL. */
-  LINKEDIN_URL: "https://www.linkedin.com/in/tu-perfil",
+  LINKEDIN_URL: "https://www.linkedin.com/in/lucindamartinez",
 
   /** Public email (optional). */
   EMAIL: "contacto@lmcareeradvisor.com",

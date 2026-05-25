@@ -36,7 +36,7 @@
     
     /* Muted surfaces */
     --muted: 210 20% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted-foreground: 0 0% 35%;
     
     /* Destructive */
     --destructive: 0 84% 60%;
