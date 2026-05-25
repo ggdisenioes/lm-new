@@ -26,8 +26,6 @@ const ContactPage = () => {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Puedes escribirme por email. Estaré encantada de responderte.
-              <br />
-              Si quieres, en el mensaje puedes incluir tu perfil de LinkedIn, tu CV y una breve nota sobre el momento profesional en el que te encuentras.
             </p>
           </motion.div>
         </div>
@@ -53,7 +51,7 @@ const ContactPage = () => {
                   </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  Escríbeme a {CONTACT.EMAIL}. Con esa información podré orientarte mejor sobre cómo puedo ayudarte.
+                  Escríbeme a {CONTACT.EMAIL}. Con esa información podré orientarte mejor sobre cómo puedo ayudarte. Si quieres, en el mensaje puedes incluir tu perfil de LinkedIn, tu CV y una breve nota sobre el momento profesional en el que te encuentras.
                 </p>
                 <div className="mt-6">
                   <span className="text-primary font-medium text-sm inline-flex items-center gap-2">
@@ -134,6 +132,10 @@ const ContactPage = () => {
                 <p><strong>Destinatarios:</strong> no se cederán datos a terceros, salvo obligación legal.</p>
                 <p><strong>Derechos:</strong> puedes acceder, rectificar y suprimir tus datos, así como ejercer otros derechos, escribiendo a rgpd@lmcareeradvisor.com</p>
                 <p><strong>Información adicional:</strong> consulta la <Link to="/privacidad" className="text-primary hover:underline">Política de Privacidad</Link> para más detalles.</p>
+              </div>
+              <div className="flex items-start gap-2 mt-4 text-xs text-muted-foreground">
+                <span>☐</span>
+                <span>He leído y acepto la <Link to="/privacidad" className="text-primary hover:underline">Política de Privacidad</Link>. <em>(Obligatoria)</em></span>
               </div>
               <div className="flex flex-wrap gap-3 text-xs mt-4">
                 <Link to="/privacidad" className="text-primary hover:underline">
