@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Mail } from "lucide-react";
 import { CONTACT } from "@/lib/contact";
+import logoLucy from "@/assets/logo-lucy.png";
 
 export const Footer = () => {
   return (
@@ -10,9 +11,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <span className="text-2xl font-display font-bold">
-                LM <span className="text-accent">Career Advisor</span>
-              </span>
+              <img src={logoLucy} alt="LM Career Advisor" className="h-12 w-auto brightness-0 invert" />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
               Talent & Career Advisor | Job Search Strategy Expert | Headhunter
@@ -65,17 +64,17 @@ export const Footer = () => {
             <h4 className="font-display font-semibold text-lg mb-6">Servicios</h4>
             <ul className="space-y-3">
               {[
-                "Gestión de Carrera",
-                "Búsqueda de Empleo",
-                "CV y LinkedIn",
-                "Entrevista de Trabajo",
+                { name: "Gestión de Carrera", href: "/servicios/gestion-carrera" },
+                { name: "Búsqueda de Empleo", href: "/servicios/busqueda-empleo" },
+                { name: "CV y LinkedIn", href: "/servicios/rediseno-optimizacion" },
+                { name: "Entrevista de Trabajo", href: "/servicios/entrenamiento-entrevista" },
               ].map((service) => (
-                <li key={service}>
+                <li key={service.name}>
                   <Link
-                    to="/servicios"
+                    to={service.href}
                     className="text-white/70 hover:text-accent transition-colors text-sm"
                   >
-                    {service}
+                    {service.name}
                   </Link>
                 </li>
               ))}

@@ -92,7 +92,7 @@ const servicesData: Record<string, {
     subtitle: "Rediseño y Optimización",
     description: "Estas herramientas son tus aliadas: úsalas para avanzar, destacar y abrir oportunidades. Bien elaboradas, se convierten en auténticas palancas estratégicas que refuerzan tu posicionamiento, amplían tu visibilidad y generan resultados reales en el mercado.",
     forWhom: [
-      "Profesionales que quieren un CV actualizado y estratégico y de alto impacto",
+      "Profesionales que quieren un CV estratégico y de alto impacto",
       "Ejecutivos que buscan mejorar su presencia en LinkedIn",
       "Ponentes que necesitan una bio ejecutiva clara e impactante",
       "Personas en búsqueda activa que aún no consiguen resultados",

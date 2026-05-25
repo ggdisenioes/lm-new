@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoLucy from "@/assets/logo-lucy.png";
 
 const navLinks = [
   { name: "Inicio", href: "/" },
@@ -43,18 +44,12 @@ export const Header = () => {
         <div className="container-custom">
           <nav className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
-              {/*
-                TODO (Logo):
-                Reemplaza este placeholder por tu logo rectangular.
-                Sugerencia: guarda el archivo en `src/assets/` y usa un <img /> aquí.
-              */}
-              <div className="h-10 w-32 sm:w-40 rounded-md border border-border bg-white/60 backdrop-blur flex items-center justify-center text-xs text-muted-foreground">
-                Logo aquí
-              </div>
-              <span className="text-lg sm:text-xl font-display font-bold tracking-tight text-foreground">
-                LM <span className="text-accent">Career Advisor</span>
-              </span>
+            <Link to="/" className="flex items-center">
+              <img
+                src={logoLucy}
+                alt="LM Career Advisor"
+                className="h-12 sm:h-14 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}

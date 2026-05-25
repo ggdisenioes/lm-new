@@ -160,10 +160,7 @@ const AboutPage = () => {
                 Un enfoque centrado en la persona
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Creo firmemente que cada profesional tiene un valor único que aportar. 
-                Mi misión es ayudarte a descubrirlo, articularlo y proyectarlo de manera 
-                que genere oportunidades reales. No trabajo con fórmulas genéricas: 
-                cada asesoramiento se adapta a tu situación, tus objetivos y tu ritmo.
+                Un enfoque cercano y estratégico, respaldado por una sólida experiencia en executive search y desarrollo de talento, para ayudarte a entender mejor tu valor y proyectar tu carrera con mayor dirección y confianza.
               </p>
               <div className="flex justify-center mt-12">
                 <img

@@ -42,7 +42,7 @@ const services = [
     subtitle: "Rediseño y Optimización",
     description: "Estas herramientas son tus aliadas: úsalas para avanzar, destacar y abrir oportunidades. Bien elaboradas, se convierten en palancas estratégicas.",
     benefits: [
-      "CV profesional y carta de presentación estratégico de alto impacto",
+      "CV estratégico de alto impacto",
       "Perfil LinkedIn optimizado para visibilidad",
       "Bio ejecutiva para foros y ponencias",
       "Mensajes consistentes en todos los canales",
