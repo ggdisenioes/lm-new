@@ -158,13 +158,10 @@ const HomePage = () => {
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-0 w-1/2 h-full">
-            <motion.img
+            <img
               src={heroImage}
               alt=""
-              initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 0.9, scale: 1 }}
-              transition={{ duration: 1.2 }}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover opacity-90"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
           </div>
@@ -264,19 +261,19 @@ const HomePage = () => {
             {[
               {
                 icon: TrendingUp,
-                text: "Dar un nuevo impulso a tu carrera\n Redefine tu trayectoria y asume nuevos desafíos con confianza.",
+                text: "Dar un nuevo impulso a tu carrera.\n Redefine tu trayectoria y asume nuevos desafíos con confianza.",
               },
               {
                 icon: Target,
-                text: "Posicionarte con más claridad y confianza\n Fortalece tu perfil, visibilidad y oportunidades frente a otros profesionales.",
+                text: "Posicionarte con más claridad y confianza.\n Fortalece tu perfil, visibilidad y oportunidades frente a otros profesionales.",
               },
               {
                 icon: Compass,
-                text: "Integrarte o retornar al mercado laboral en España\n Aprovecha tu experiencia internacional y destaca en un entorno nuevo.",
+                text: "Integrarte o retornar al mercado laboral en España.\n Aprovecha tu experiencia internacional y destaca en un entorno nuevo.",
               },
               {
                 icon: Sparkles,
-                text: "Empezar con foco tu desarrollo profesional\n Trabaja tu marca personal y potencia tu proyección desde el inicio.",
+                text: "Empezar con foco tu desarrollo profesional.\n Trabaja tu marca personal y potencia tu proyección desde el inicio.",
               },
             ].map((item, index) => (
               <StaggerItem key={index}>
@@ -397,7 +394,7 @@ const HomePage = () => {
       {/* Narrative Block */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="max-w-3xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <div className="accent-line-lg mb-6" />
               <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-6">
@@ -415,6 +412,16 @@ const HomePage = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 El resultado: decisiones más claras, seguras y una proyección real de tu potencial en el mercado laboral.
               </p>
+            </AnimatedSection>
+            <AnimatedSection delay={0.2} className="hidden lg:block">
+              <div className="relative">
+                <img
+                  src={servicesImage}
+                  alt="Asesoramiento profesional"
+                  className="w-full rounded-2xl opacity-85"
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-white/30 to-transparent" />
+              </div>
             </AnimatedSection>
           </div>
         </div>

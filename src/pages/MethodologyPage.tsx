@@ -101,7 +101,7 @@ const MethodologyPage = () => {
         <div className="container-custom">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-              Los pilares de mi enfoque
+              Los pilares de mi método
             </h2>
             <div className="accent-line mx-auto" />
           </AnimatedSection>
