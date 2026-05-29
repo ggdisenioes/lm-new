@@ -10,6 +10,16 @@ import conseguirasImage from "@/assets/conseguiras-image.png";
 
 const testimonials = [
   {
+    role: "Director General",
+    industry: "Servicios aeroportuarios",
+    text: "Necesitaba apoyo para centrarme en una nueva etapa laboral tras la salida voluntaria de mi empresa con la que estuve vinculado muchos años, definir mi perfil profesional, ponerlo en valor y posicionarlo mejor en el mercado. Las sesiones me aportaron exactamente lo que necesitaba en ese momento, ayudándome a avanzar con claridad y foco lo que me permitió construir una base sólida para afrontar esta nueva fase profesional. Destaco especialmente la empatía y el acompañamiento recibido durante todo el proceso.",
+  },
+  {
+    role: "CFO",
+    industry: "Comunicación y marketing digital",
+    text: "Inicié el proceso de asesoramiento con el objetivo reposicionar mi perfil profesional. Tenía claro que quería seguir creciendo y necesitaba ordenar ideas, ganar foco y entender mejor cómo reforzar mi posicionamiento desde una visión más estratégica. El trabajo con Lucinda me ayudó a clarificar mi propuesta diferencial, reconocer fortalezas que no estaba poniendo en valor y ganar confianza para mirar mi trayectoria con más ambición y alineada con mi potencial. Destaco especialmente su capacidad para aportar una mirada externa, objetiva y muy humana, ayudándome a aterrizar ideas y a definir mejor cómo posicionarme profesionalmente.",
+  },
+  {
     role: "Operations Manager",
     industry: "Fintech / Supply Chain Finance",
     text: "Me encontraba en un proceso de transición del mercado argentino al español y no tenía claro cómo posicionar mi perfil en un entorno completamente diferente. El trabajo con Lucinda me ayudó a entender el valor real de mi trayectoria y a comunicar mi experiencia de forma más estratégica, dándome además mucha más seguridad en el proceso. Destaco especialmente el análisis personalizado de mi perfil, la preparación para entrevistas y el conocimiento actualizado del mercado laboral.",
@@ -38,16 +48,6 @@ const testimonials = [
     role: "Director Corporativo",
     industry: "Audiovisual y broadcasting",
     text: "Después de más de 25 años en la misma empresa, atravesaba un momento de gran desorientación laboral y profesional. Desde el primer contacto encontré seguridad, confianza y un acompañamiento cercano que me ayudó a afrontar esta transición con más claridad. Las sesiones me aportaron guía, reflexión y estrategia para avanzar en el proceso de salida voluntaria y reincorporación al mercado laboral. Destaco especialmente el apoyo humano y profesional recibido, sintiendo en todo momento que contaba con una persona de confianza a la que acudir.",
-  },
-  {
-    role: "Director General",
-    industry: "Servicios aeroportuarios",
-    text: "Necesitaba apoyo para centrarme en una nueva etapa laboral tras la salida voluntaria de mi empresa con la que estuve vinculado muchos años, definir mi perfil profesional, ponerlo en valor y posicionarlo mejor en el mercado. Las sesiones me aportaron exactamente lo que necesitaba en ese momento, ayudándome a avanzar con claridad y foco lo que me permitió construir una base sólida para afrontar esta nueva fase profesional. Destaco especialmente la empatía y el acompañamiento recibido durante todo el proceso.",
-  },
-  {
-    role: "CFO",
-    industry: "Comunicación y marketing digital",
-    text: "Inicié el proceso de asesoramiento con el objetivo reposicionar mi perfil profesional. Tenía claro que quería seguir creciendo y necesitaba ordenar ideas, ganar foco y entender mejor cómo reforzar mi posicionamiento desde una visión más estratégica. El trabajo con Lucinda me ayudó a clarificar mi propuesta diferencial, reconocer fortalezas que no estaba poniendo en valor y ganar confianza para mirar mi trayectoria con más ambición y alineada con mi potencial. Destaco especialmente su capacidad para aportar una mirada externa, objetiva y muy humana, ayudándome a aterrizar ideas y a definir mejor cómo posicionarme profesionalmente.",
   },
 ];
 
@@ -228,21 +228,6 @@ const HomePage = () => {
 </div>
         </div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-6 h-10 rounded-full border-2 border-primary/30 flex items-start justify-center p-2"
-          >
-            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-          </motion.div>
-        </motion.div>
       </section>
 
       {/* "Encuentra tu mejor versión para..." Section */}

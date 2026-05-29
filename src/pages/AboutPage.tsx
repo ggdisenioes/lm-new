@@ -71,13 +71,12 @@ const AboutPage = () => {
               </div>
             </AnimatedSection>
 
-            <AnimatedSection direction="right">
+            <AnimatedSection direction="right" className="flex justify-center">
               <div className="relative">
-                
                 <img
                   src={aboutImage}
                   alt="Detalle profesional"
-                  className="relative rounded-2xl shadow-xl w-full"
+                  className="relative rounded-2xl shadow-xl max-w-xs w-full"
                 />
               </div>
             </AnimatedSection>
@@ -166,7 +165,7 @@ const AboutPage = () => {
                 <img
                   src={methodologyIcon}
                   alt="Enfoque centrado en la persona"
-                  className="w-48 h-48 object-contain"
+                  className="w-96 h-96 object-contain"
                 />
               </div>
             </AnimatedSection>

@@ -21,12 +21,17 @@ const ContactPage = () => {
           >
             <p className="text-primary font-medium mb-4">Contacto</p>
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-6">
-              Solicita una conversación{" "}
-              <span className="text-gradient-blue">conmigo</span>
+              Hablemos sobre tu{" "}
+              <span className="text-gradient-blue">próximo paso profesional</span>
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Puedes escribirme por email. Estaré encantada de responderte.
-            </p>
+            <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
+              <p>
+                Puedes escribirme por email, LinkedIn o WhatsApp. Cuéntame brevemente cuál es tu situación profesional y qué te gustaría trabajar o qué barreras estás encontrando.
+              </p>
+              <p>
+                Si lo deseas, también puedes compartir tu CV o perfil de LinkedIn para darme más contexto sobre tu trayectoria profesional. A partir de ahí, podré orientarte sobre el servicio que mejor encaje contigo.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -121,22 +126,13 @@ const ContactPage = () => {
             </AnimatedSection>
           </div>
 
-          {/* RGPD / Privacy notice */}
+          {/* Privacy notice */}
           <AnimatedSection delay={0.35} className="mt-10">
             <div className="bg-muted/50 rounded-xl p-6">
-              <h4 className="font-semibold text-foreground mb-3 text-sm">Información básica de protección de datos</h4>
-              <div className="text-muted-foreground text-xs leading-relaxed space-y-1">
-                <p><strong>Responsable:</strong> Lucinda Martínez — email: rgpd@lmcareeradvisor.com</p>
-                <p><strong>Finalidad:</strong> responder a las consultas recibidas y gestionar la comunicación profesional solicitada.</p>
-                <p><strong>Legitimación:</strong> interés legítimo en responder a las solicitudes de información o contacto recibidas, así como la relación precontractual que pueda derivarse de la comunicación.</p>
-                <p><strong>Destinatarios:</strong> no se cederán datos a terceros, salvo obligación legal.</p>
-                <p><strong>Derechos:</strong> puedes acceder, rectificar y suprimir tus datos, así como ejercer otros derechos, escribiendo a rgpd@lmcareeradvisor.com</p>
-                <p><strong>Información adicional:</strong> consulta la <Link to="/privacidad" className="text-primary hover:underline">Política de Privacidad</Link> para más detalles.</p>
-              </div>
-              <div className="flex items-start gap-2 mt-4 text-xs text-muted-foreground">
-                <span>☐</span>
-                <span>He leído y acepto la <Link to="/privacidad" className="text-primary hover:underline">Política de Privacidad</Link>. <em>(Obligatoria)</em></span>
-              </div>
+              <h4 className="font-semibold text-foreground mb-3 text-sm">Información de protección de datos</h4>
+              <p className="text-muted-foreground text-xs leading-relaxed">
+                Trataremos tus datos únicamente para responder a tu consulta y, en su caso, gestionar la relación profesional. La base jurídica del tratamiento es la aplicación de medidas precontractuales o el interés legítimo. Más información en la <Link to="/privacidad" className="text-primary hover:underline">Política de Privacidad</Link>.
+              </p>
               <div className="flex flex-wrap gap-3 text-xs mt-4">
                 <Link to="/privacidad" className="text-primary hover:underline">
                   Política de privacidad

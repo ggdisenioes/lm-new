@@ -179,50 +179,6 @@ const MethodologyPage = () => {
         </div>
       </section>
 
-      {/* Process */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-              Cómo es el proceso
-            </h2>
-            <div className="accent-line mx-auto" />
-          </AnimatedSection>
-
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Cuestionario-briefing inicial",
-                desc: "Para entender tu contexto, objetivo y punto de partida.",
-              },
-              {
-                title: "Sesiones 1:1",
-                desc: "Trabajo personalizado por videoconferencia, enfocado a tu reto.",
-              },
-              {
-                title: "Material de apoyo",
-                desc: "Ejercicios, guías y recursos para consolidar avances.",
-              },
-              {
-                title: "Revisión y seguimiento",
-                desc: "Ajustes y soporte para asegurar implementación y resultados.",
-              },
-            ].map((step, idx) => (
-              <StaggerItem key={idx}>
-                <div className="card-premium p-8 h-full">
-                  <h3 className="text-lg font-display font-semibold text-foreground mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {step.desc}
-                  </p>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
       {/* 4 Keys */}
       <section className="section-padding bg-muted/30">
         <div className="container-custom">
