@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animated-section";
 import heroImage from "@/assets/hero-image.png";
 import servicesImage from "@/assets/services-image.png";
+import conseguirasImage from "@/assets/conseguiras-image.png";
 
 const testimonials = [
   {
@@ -521,7 +522,7 @@ const HomePage = () => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-turquoise/10 to-accent/10 rounded-3xl blur-2xl" />
                 <img
-                  src={servicesImage}
+                  src={conseguirasImage}
                   alt="Profesionales en reunión"
                   className="relative rounded-2xl shadow-xl"
                 />
