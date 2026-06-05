@@ -158,13 +158,16 @@ const HomePage = () => {
       <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 right-0 w-1/2 h-full">
+          <div className="group absolute inset-0 lg:left-1/2 lg:top-20">
             <img
               src={heroImage}
               alt=""
-              className="w-full h-full object-cover opacity-90"
+              className="w-full h-full object-cover opacity-80 saturate-[.8] brightness-[.97] transition-all duration-700 ease-out group-hover:opacity-100 group-hover:saturate-100 group-hover:brightness-100"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+            {/* Desktop: horizontal fade so the text column stays clean */}
+            <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
+            {/* Mobile/tablet: light scrim over the whole image so the dark text stays legible */}
+            <div className="lg:hidden absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/65" />
           </div>
         </div>
 

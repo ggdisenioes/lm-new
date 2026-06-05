@@ -50,20 +50,13 @@ const ContactPage = () => {
                   <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
                     <Mail className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-display font-semibold text-foreground">Email</h3>
-                    <p className="text-muted-foreground text-sm">Canal principal de contacto</p>
-                  </div>
+                  <h3 className="text-xl font-display font-semibold text-foreground">Email</h3>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  Escríbeme a {CONTACT.EMAIL}. Con esa información podré orientarte mejor sobre cómo puedo ayudarte. Si quieres, en el mensaje puedes incluir tu perfil de LinkedIn, tu CV y una breve nota sobre el momento profesional en el que te encuentras.
-                </p>
-                <div className="mt-6">
-                  <span className="text-primary font-medium text-sm inline-flex items-center gap-2">
-                    Enviar email
-                    <span className="transition-transform group-hover:translate-x-0.5">→</span>
-                  </span>
-                </div>
+                <span className="text-primary font-medium text-sm inline-flex items-center gap-2">
+                  Enviar email
+                  <span className="transition-transform group-hover:translate-x-0.5">→</span>
+                </span>
+                <p className="text-muted-foreground text-sm mt-2 break-all">{CONTACT.EMAIL}</p>
               </a>
             </AnimatedSection>
 
@@ -79,20 +72,12 @@ const ContactPage = () => {
                   <div className="w-14 h-14 rounded-xl bg-[#0A66C2]/10 flex items-center justify-center group-hover:bg-[#0A66C2] transition-colors">
                     <Linkedin className="w-7 h-7 text-[#0A66C2] group-hover:text-white transition-colors" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-display font-semibold text-foreground">LinkedIn</h3>
-                    <p className="text-muted-foreground text-sm">Contacto profesional</p>
-                  </div>
+                  <h3 className="text-xl font-display font-semibold text-foreground">LinkedIn</h3>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  También puedes ponerte en contacto conmigo en LinkedIn. Envíame un mensaje directo con tu objetivo profesional.
-                </p>
-                <div className="mt-6">
-                  <span className="text-primary font-medium text-sm inline-flex items-center gap-2">
-                    Ir a LinkedIn
-                    <span className="transition-transform group-hover:translate-x-0.5">→</span>
-                  </span>
-                </div>
+                <span className="text-primary font-medium text-sm inline-flex items-center gap-2">
+                  Ir a LinkedIn
+                  <span className="transition-transform group-hover:translate-x-0.5">→</span>
+                </span>
               </a>
             </AnimatedSection>
 
@@ -108,20 +93,12 @@ const ContactPage = () => {
                   <div className="w-14 h-14 rounded-xl bg-[#25D366]/20 flex items-center justify-center group-hover:bg-[#25D366] transition-colors">
                     <MessageCircle className="w-7 h-7 text-[#25D366] group-hover:text-white transition-colors" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-display font-semibold text-foreground">WhatsApp</h3>
-                    <p className="text-muted-foreground text-sm">Consulta breve y respuesta rápida</p>
-                  </div>
+                  <h3 className="text-xl font-display font-semibold text-foreground">WhatsApp</h3>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  Ideal para una primera toma de contacto. Te recomiendo enviar tu LinkedIn y el servicio que te interesa.
-                </p>
-                <div className="mt-6">
-                  <span className="text-primary font-medium text-sm inline-flex items-center gap-2">
-                    Abrir WhatsApp
-                    <span className="transition-transform group-hover:translate-x-0.5">→</span>
-                  </span>
-                </div>
+                <span className="text-primary font-medium text-sm inline-flex items-center gap-2">
+                  Abrir WhatsApp
+                  <span className="transition-transform group-hover:translate-x-0.5">→</span>
+                </span>
               </a>
             </AnimatedSection>
           </div>
