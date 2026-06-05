@@ -507,12 +507,12 @@ const HomePage = () => {
             </AnimatedSection>
 
             <AnimatedSection direction="right">
-              <div className="relative">
+              <div className="group relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-turquoise/10 to-accent/10 rounded-3xl blur-2xl" />
                 <img
                   src={conseguirasImage}
                   alt="Profesionales en reunión"
-                  className="relative rounded-2xl shadow-xl"
+                  className="relative rounded-2xl shadow-xl opacity-80 saturate-[.8] brightness-[.97] transition-all duration-700 ease-out group-hover:opacity-100 group-hover:saturate-100 group-hover:brightness-100"
                 />
               </div>
             </AnimatedSection>
